@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'faker'
 gem 'rails', '4.2.0'
 gem 'rails-api'
 gem 'spring', :group => :development
