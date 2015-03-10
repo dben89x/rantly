@@ -8,13 +8,18 @@
     <input type="text"
       placeholder="your name here"
       ng-model="name">
-    <div>
-      <form>
-        <input type="text" ng-model="thing.stuff">
+
+    <div ng-controller="MainCtrl">
+      <form ng-submit='addThing()'>
+        <input type="text" ng-model="newThing">
+        <input type="submit" value="Add Thing">
       </form>
-      {{thing.stuff}}
-      <h4>Hello, {{name}}</h4>
-      <h5>This is your model: {{name}}</h5>
+      <li ng-repeat='thing in awesomeThings'>
+        {{thing}}
+      </li>
+      <h4>Hello, {{awesomeThings}}</h4>
+
     </div>
+
   </body>
 </html>

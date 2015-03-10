@@ -14,4 +14,15 @@ angular.module('rantlyApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.tittyThings = [
+      'poop',
+      'balls',
+      'tits'
+    ];
+
+    $scope.addThing = function() {
+      $scope.awesomeThings.push($scope.newThing);
+      $scope.newThing = '';
+    };
   });
