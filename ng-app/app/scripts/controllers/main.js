@@ -44,13 +44,19 @@
   angular.module('rantlyApp')
     .controller('MainCtrl', function ($scope, $resource) {
       var User = $resource('/users/:id', {id: '@id'}, {update: {method: 'PUT'}});
-      console.log(User.query());
-      $scope.awesomeThings = User.query();
+      console.log(User.get());
+      $scope.users = User.get();
 
-      $scope.tittyThings = [
-        'poop',
-        'balls',
-        'tits'
+      $scope.awesomeThings = [
+        'foo',
+        'bar',
+        'baz'
+      ];
+
+      $scope.coolThings = [
+        'poo',
+        'par',
+        'jazz'
       ];
 
       $scope.addThing = function() {
