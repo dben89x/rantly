@@ -4,16 +4,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
   </head>
   <body>
+    <div class="container">
+
     <div ng-controller="MainCtrl">
       <form ng-submit='addThing()'>
-        <input type="text" ng-model="newThing">
-        <input type="submit" value="Add Thing">
+        <div class="form-horizontal">
+          <input type="text" ng-model="newThing">
+          <input type="submit" value="Add Thing">
+        </div>
       </form>
       <li ng-repeat='thing in awesomeThings'>
         {{thing}}
       </li>
       <h4>Awesome things: {{awesomeThings}}</h4>
       <h4>Cool things: {{coolThings}}</h4>
+    </div>
     </div>
 
   </body>

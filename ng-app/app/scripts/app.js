@@ -24,7 +24,7 @@ angular
         controller: 'MainCtrl'
       })
       .when('/users', {
-        templateUrl: 'views/main.html',
+        template: 'views/main.html',
         controller: 'MainCtrl'
       })
       .when('/about', {

@@ -3,7 +3,6 @@ class UsersController<ApplicationController
 
   def index
     respond_with User.all
-    render :json
   end
 
   def show

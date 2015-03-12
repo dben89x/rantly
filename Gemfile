@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'responders', '~> 2.0' 
 gem 'faker'
 gem 'rails', '4.2.0'
 gem 'rails-api'
