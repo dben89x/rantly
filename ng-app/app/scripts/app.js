@@ -1,31 +1,26 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name rantlyApp
- * @description
- * # rantlyApp
- *
- * Main module of the application.
- */
-angular
-  .module('rantlyApp', [
+var rantlyApp = angular.module('rantlyApp', [
+    'rantlyServices',
+    'rantlyControllers',
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+  rantlyApp.config(['$routeProvider',
+  function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .when('/users', {
-        template: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/users.html',
+        controller: 'UsersCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -35,4 +30,11 @@ angular
         // template: 'this doesnt exist'
         redirectTo: '/'
       });
-  });
+  }
+]);
+
+// rantlyApp.factory('User', ['$resource', function($resource) {
+//   return $resource('/api/users/:id.json', null, {
+//     'update': { method:'PUT' }
+//   });
+// }]);

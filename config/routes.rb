@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: redirect('/')
-  resources :users
+  scope '/api' do
+    resources :users, except: [:new, :edit]
+  end
 end

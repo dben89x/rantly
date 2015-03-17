@@ -56,6 +56,14 @@ rantlyControllers.controller('MainCtrl', function ($scope) {
 
 });
 
+rantlyControllers.controller('UsersCtrl', function($scope, $resource) {
+  $scope.foo = [
+    'foo',
+    'bar',
+    'baz'
+  ];
+
+});
     // 'use strict';
 
 /* Controllers */
