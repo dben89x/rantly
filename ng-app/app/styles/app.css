@@ -16,25 +16,45 @@ body {
 }
 
 .nav-header a {
-  float: left;
+  float:left;
   padding: 15px;
   color: #FFF;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 23px;
 }
 
-a{
+.subnav {
+  height: 46px;
+  margin-left:15px;
+  background-color:#3498DB;
+}
+
+.rant-search::-webkit-input-placeholder {
+  color:white;
+}
+
+.rant-search {
+  float:left;
+  padding:0.25em 0 0 0.5em;
+  font-size:22px;
+  font-weight:700;
+  border:none;
+  color:white;
+  background-color:#3498DB;
+}
+
+/*a{
  font-size: 15px;
  color: black;
  font-weight: 700;
  padding-left: 10px;
  padding-right: 10px;
  margin-bottom: 10px;
-}
-
+}*/
+/*
 a:-webkit-any-link {
  font-color: white;
  text-decoration: none;
  cursor: auto;
-}
+}*/

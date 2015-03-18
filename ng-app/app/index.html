@@ -6,22 +6,27 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/app.css">
   </head>
 
   <body ng-app="rantly">
 
     <header class='nav-header' role='navigation'>
-      <div class='content'>
-        <a class="navbar-brand" href="#/">Rantly</a>
-        <nav>
-          <a href="#/">Rants</a>
-          <a href="#/users">Users</a>
-          <a href="#/styleguide">Styleguide</a>
-          <a href="#/signup">Sign Up</a>
-        </nav>
-      </div>
+      <a class="navbar-brand" href="#/">Rantly</a>
+      <nav>
+        <a href="#/">Rants</a>
+        <a href="#/users">Users</a>
+        <a href="#/styleguide">Styleguide</a>
+        <a href="#/signup">Sign Up</a>
+      </nav>
     </header>
+
+    <div class="subnav">
+      <input type="text" ng-model="rantSearch" placeholder='Search' class='rant-search'>
+    </div>
+    <aside class="signin-aside">
+
+    </aside>
 
     <div class="container">
       <div ng-view=""></div>
