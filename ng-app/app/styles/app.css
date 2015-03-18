@@ -30,20 +30,69 @@ body {
   background-color:#3498DB;
 }
 
-.rant-search::-webkit-input-placeholder {
+.rant-search-input::-webkit-input-placeholder {
   color:white;
 }
 
-.rant-search {
+.rant-create-button {
+  height:34px;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  margin:0.3em 0.75em 0 0;
+  background-color:white;
+  font-size:15px;
+  color:#1ABC9C;
+}
+
+.rant-search-input {
+  width:351px;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
   float:left;
-  padding:0.25em 0 0 0.5em;
-  font-size:22px;
+  padding:0.45em 0 0 0.7em;
+  font-size:19px;
   font-weight:700;
   border:none;
   color:white;
   background-color:#3498DB;
 }
 
+.rant-search-input:focus{
+  outline:0;
+}
+
+.signin-aside{
+  width:361px;
+  height:196px;
+  margin-left:15px;
+  border:1px solid #EBEBEB;
+  box-shadow:1px 1px 1px #EBEBEB;
+  border-radius:3px;
+}
+
+.signin-form {
+  margin:18px;
+}
+
+.form-group{
+  padding-left:.25em;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  border:2px solid #EBEBEB;
+  font-size:18px;
+  border-radius:3px;
+  height:44px;
+  width:331px;
+}
+
+.form-group:focus{
+  outline: 2px solid #1ABC9C;
+}
+
+.signin-button{
+  height: 33px;
+  background-color:#1ABC9C;
+  color:white;
+  font-size:14px;
+  border:none;
+}
 /*a{
  font-size: 15px;
  color: black;

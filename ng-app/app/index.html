@@ -22,10 +22,31 @@
     </header>
 
     <div class="subnav">
-      <input type="text" ng-model="rantSearch" placeholder='Search' class='rant-search'>
+      <input type="text"
+             ng-model="rantSearch"
+             placeholder='Search'
+             class='rant-search-input'>
+      <input type="button"
+             ng-model="createRant"
+             value='New Rant'
+             class='rant-create-button pull-right btn'>
     </div>
-    <aside class="signin-aside">
 
+    <aside class="signin-aside">
+      <form class="signin-form">
+        <input type="text"
+               ng-model="email"
+               placeholder='Your email'
+               class='form-group'>
+        <input type="text"
+               ng-model="password"
+               placeholder='Your password'
+               class="form-group">
+        <input type="submit"
+               ng-model="submit"
+               value="Log In"
+               class="form-group signin-button">
+      </form>
     </aside>
 
     <div class="container">
