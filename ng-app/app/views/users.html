@@ -1,9 +1,12 @@
-<h1>Users</h1>
 
-<ul ng-repeat="user in users">
-  <li>{{user.first_name}}</li>
-</ul>
+<div ng-controller='UsersCtrl'>
+  <h1>Users</h1>
 
-<ul ng-repeat="foo in foos">
-  <li>{{foo}}</li>
-</ul>
+  <ul ng-repeat="user in users">
+    <li>{{user.first_name}}</li>
+  </ul>
+
+  <ul ng-repeat="foo in foos">
+    <li>{{foo}}</li>
+  </ul>
+</div>

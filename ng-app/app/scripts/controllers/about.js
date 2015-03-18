@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the rantlyApp
  */
-angular.module('rantlyApp')
+angular.module('rantly')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
