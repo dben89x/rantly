@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rantlyControllers')
-.controller('MainCtrl', ['$scope', function ($scope) {
+.controller('SignUpCtrl', ['$scope', function ($scope) {
   $scope.awesomeThings = [
     'foo',
     'bar',
@@ -12,5 +12,4 @@ angular.module('rantlyControllers')
     $scope.awesomeThings.push($scope.newThing);
     $scope.newThing = '';
   };
-
 }]);

@@ -23,6 +23,10 @@ function ($routeProvider) {
       templateUrl: 'views/users.html',
       controller: 'UsersCtrl'
     })
+    .when('/signup', {
+      templateUrl: 'views/signup.html',
+      controller: 'SignUpCtrl'
+    })
     .otherwise({
       // template: 'this doesnt exist'
       redirectTo: '/'
