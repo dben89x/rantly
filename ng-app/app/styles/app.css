@@ -132,7 +132,11 @@ body {
   border-radius:2px;
   margin: 0 15px 15px 0;
 }
+.rant-thumb-content{
+  margin:15px;
+}
 .rant-thumb-title{
+  margin:-5px 0 15px 0;
   font-weight:600;
   font-size:29px;
 }
@@ -145,7 +149,6 @@ body {
 .rant-thumb-body{
   vertical-align:top;
   margin-left:20px;
-  width:79%;
   font-size:1.3em;
   display:inline-block;
 }
