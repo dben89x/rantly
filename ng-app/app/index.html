@@ -16,7 +16,6 @@
       <nav>
         <a href="#/">Rants</a>
         <a href="#/users">Users</a>
-        <a href="#/styleguide">Styleguide</a>
         <a href="#/signup">Sign Up</a>
       </nav>
     </header>
@@ -34,14 +33,15 @@
 
     <aside class="signin-aside">
       <form class="signin-form">
+        <!-- <span class='fa fa-lg fa-user pull-right'></span> -->
         <input type="text"
                ng-model="email"
                placeholder='Your email'
-               class='form-group'>
+               class='form-group email-input'>
         <input type="text"
                ng-model="password"
                placeholder='Your password'
-               class="form-group">
+               class="form-group password-input">
         <input type="submit"
                ng-model="submit"
                value="Log In"
@@ -49,7 +49,7 @@
       </form>
     </aside>
 
-    <div class="container">
+    <div class="main">
       <div ng-view=""></div>
     </div>
 
@@ -65,6 +65,7 @@
     </script>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -78,6 +79,7 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/rants.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/users.js"></script>
     <script src="scripts/controllers/about.js"></script>

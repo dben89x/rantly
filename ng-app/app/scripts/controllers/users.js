@@ -5,6 +5,4 @@ angular.module('rantlyControllers')
   $http.get('http://localhost:3000/api/users/').success(function(data) {
     $scope.users = data.users;
   });
-
-  $scope.foos = ['foo', 'bar', 'baz'];
 }]);

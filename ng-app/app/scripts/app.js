@@ -16,16 +16,12 @@ angular.module('rantly').config(['$routeProvider',
 function ($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'views/main.html',
-      controller: 'MainCtrl'
+      templateUrl: 'views/rants.html',
+      controller: 'RantsCtrl'
     })
     .when('/users', {
       templateUrl: 'views/users.html',
       controller: 'UsersCtrl'
-    })
-    .when('/about', {
-      templateUrl: 'views/about.html',
-      controller: 'AboutCtrl'
     })
     .otherwise({
       // template: 'this doesnt exist'

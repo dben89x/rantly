@@ -5,6 +5,9 @@ body {
  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
+
+
+/*nav*/
 .nav-header {
   background: #34495E;
   height: 53px;
@@ -24,6 +27,9 @@ body {
   line-height: 23px;
 }
 
+
+
+/*subnav*/
 .subnav {
   height: 46px;
   margin-left:15px;
@@ -42,6 +48,10 @@ body {
   font-size:15px;
   color:#1ABC9C;
 }
+.rant-create-button:hover{
+  background-color:#1ABC9C;
+  color:white;
+}
 
 .rant-search-input {
   width:351px;
@@ -59,7 +69,11 @@ body {
   outline:0;
 }
 
+
+
+/*sign-in*/
 .signin-aside{
+  display:inline-block;
   width:361px;
   height:196px;
   margin-left:15px;
@@ -93,6 +107,63 @@ body {
   font-size:14px;
   border:none;
 }
+.signin-button:hover{
+  color:#1ABC9C;
+  background-color:white;
+  border: 1px solid #1ABC9C;
+}
+
+
+
+/*main*/
+.main{
+  float:right;
+  display:inline;
+  width:1063px;
+  padding:15px 0 0 15px;
+}
+
+
+
+/*rants*/
+.rant-thumb{
+  border:1px solid #EBEBEB;
+  box-shadow:1px 1px 1px #EBEBEB;
+  border-radius:2px;
+  margin: 0 15px 15px 0;
+}
+.rant-thumb-title{
+  font-weight:600;
+  font-size:29px;
+}
+.rant-thumb-avatar{
+  display:inline;
+  border: 4px dashed black;
+  border-radius: 25px 25px 0;
+  margin-bottom:15px;
+}
+.rant-thumb-body{
+  vertical-align:top;
+  margin-left:20px;
+  width:79%;
+  font-size:1.3em;
+  display:inline-block;
+}
+
+
+
+/*users*/
+.user-thumb{
+  border:1px solid #EBEBEB;
+  box-shadow:1px 1px 1px #EBEBEB;
+  border-radius:2px;
+  height:192px;
+  width:23.5%;
+  margin: 0 15px 15px 0;
+}
+
+
+
 /*a{
  font-size: 15px;
  color: black;
@@ -106,4 +177,25 @@ a:-webkit-any-link {
  font-color: white;
  text-decoration: none;
  cursor: auto;
+}*/
+
+/*.fa-user{
+  color:#BFC9CA;
+  padding-top:.75em;
+  position:absolute;
+  z-index:-1;
+}*/
+/*#user-icon {
+  position: relative;
+  z-index: 1;
+  left: -40px;
+  top: 1px;
+  color: #7B7B7B;
+  width: 0;
+}*/
+
+/*.email-input::-webkit-input-placeholder::after {
+   font-family: fontAwesome;
+   content:'f007';
+   color: #1ABC9C;
 }*/

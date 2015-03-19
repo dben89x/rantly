@@ -1,12 +1,11 @@
 
 <div ng-controller='UsersCtrl'>
-  <h1>Users</h1>
 
-  <ul ng-repeat="user in users">
-    <li>{{user.first_name}}</li>
-  </ul>
+  <div ng-repeat="user in users">
+    <div class="user-thumb col-md-3">
+      <h4>{{user.full_name}}</h4>
+      <h5>{{user.email}}</h5>
+    </div>
+  </div>
 
-  <ul ng-repeat="foo in foos">
-    <li>{{foo}}</li>
-  </ul>
 </div>
