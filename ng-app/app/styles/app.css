@@ -74,7 +74,7 @@ body {
 /*sign-in*/
 .signin-aside{
   display:inline-block;
-  width:361px;
+  width:25%;
   height:196px;
   margin-left:15px;
   border:1px solid #EBEBEB;
@@ -87,13 +87,13 @@ body {
 }
 
 .form-group{
-  padding-left:.25em;
+  padding:.25em;
   font-family: '.HelveticaNeueDeskInterface-Regular';
   border:2px solid #EBEBEB;
   font-size:18px;
   border-radius:3px;
   height:44px;
-  width:331px;
+  width:100%;
 }
 
 .form-group:focus{
@@ -113,13 +113,27 @@ body {
   border: 1px solid #1ABC9C;
 }
 
+.fa{
+  position:absolute;
+  left:92%;
+  padding-top:.8em;
+  color: #BFC9CA;
+}
+
+.email-input:focus ~ .fa {
+  color: #1ABC9C;
+}
+
+.password-input:focus ~ .fa {
+  color: #1ABC9C;
+}
 
 
 /*main*/
 .main{
   float:right;
   display:inline;
-  width:1063px;
+  width:73.9%;
   padding:15px 0 0 15px;
 }
 
@@ -136,22 +150,25 @@ body {
   margin:15px;
 }
 .rant-thumb-title{
-  margin:-5px 0 15px 0;
   font-weight:600;
   font-size:29px;
+  margin-bottom:.4em;
 }
 .rant-thumb-avatar{
+  clear:both;
+  float:left;
   display:inline;
   border: 4px dashed black;
   border-radius: 25px 25px 0;
-  margin-bottom:15px;
+  margin-right:20px;
 }
 .rant-thumb-body{
-  vertical-align:top;
-  margin-left:20px;
+  width:100%;
+  clear:both;
+  display:inline;
   font-size:1.3em;
-  display:inline-block;
 }
+
 
 
 

@@ -34,18 +34,30 @@
     <aside class="signin-aside">
       <form class="signin-form">
         <!-- <span class='fa fa-lg fa-user pull-right'></span> -->
-        <input type="text"
-               ng-model="email"
-               placeholder='Your email'
-               class='form-group email-input'>
-        <input type="text"
-               ng-model="password"
-               placeholder='Your password'
-               class="form-group password-input">
-        <input type="submit"
-               ng-model="submit"
-               value="Log In"
-               class="form-group signin-button">
+        <div class="email-parent" style='position:relative;z-index:1'>
+          <input type="text"
+                 ng-model="email"
+                 placeholder='Your email'
+                 class='form-group email-input'
+                 style='position:absolute'>
+          <label class='fa fa-lg fa-user'></label>
+        </div>
+
+        <div class="email-parent" style='position:relative;padding-top:18%'>
+          <input type="text"
+                 ng-model="password"
+                 placeholder='Your password'
+                 class="form-group password-input">
+          <label class='fa fa-lg fa-lock' style='position:absolute;margin-top:-18%'></label>
+        </div>
+
+        <div class="parent" style='position:relative'>
+          <input type="submit"
+                 ng-model="submit"
+                 value="Log In"
+                 class="form-group signin-button">
+        </div>
+
       </form>
     </aside>
 
