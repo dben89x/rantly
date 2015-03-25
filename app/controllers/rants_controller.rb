@@ -7,6 +7,10 @@ class RantsController < ApplicationController
     render json: Rant.find(params[:id])
   end
 
+  def show
+    render json: Rant.find(params[:id])
+  end
+
   def create
 
   end

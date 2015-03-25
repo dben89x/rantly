@@ -1,8 +1,14 @@
 'use strict';
 
 angular.module('rantlyControllers')
-.controller('UsersCtrl', ['$scope', '$http', function ($scope, $http) {
-  $http.get('http://localhost:3000/api/users/').success(function(data) {
-    $scope.users = data.users;
-  });
+.controller('UsersCtrl', ['$scope', '$resource', 'Users', 'User', '$location', '$routeParams', '$route',
+  function ($scope, $resource, Users, User, $location, $routeParams, $route) {
+    Users.get(function(users) {
+      $scope.users = users.users;
+    });
+    User.get({id: 100}, function(user){
+      $scope.user = user;
+    });
+    console.log(Object.keys($routeParams));
+    console.log($route.current.params);
 }]);

@@ -2,6 +2,7 @@
 
 angular.module('rantly', [
   'rantlyControllers',
+  'rantlyServices',
   'ngAnimate',
   'ngCookies',
   'ngResource',
@@ -11,9 +12,10 @@ angular.module('rantly', [
 ]);
 
 angular.module('rantlyControllers', []);
+angular.module('rantlyServices', []);
 
-angular.module('rantly').config(['$routeProvider',
-function ($routeProvider) {
+angular.module('rantly')
+.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/rants.html',
@@ -32,11 +34,12 @@ function ($routeProvider) {
       controller: 'NewRantCtrl'
     })
     .when('/rants/:id/edit', {
-      template: 'editRant.html',
+      templateUrl: 'views/editRant.html',
       controller: 'EditRantCtrl'
     })
-    .when('/page-two', {
-      templateUrl : 'two.html'
+    .when('/rants/:id', {
+      templateUrl: 'views/showRant.html',
+      controller: 'ShowRantCtrl'
     })
     .otherwise({
       // template: 'this doesnt exist'
@@ -44,6 +47,21 @@ function ($routeProvider) {
     });
   }
 ])
+
+.factory('Users', ['$resource',function($resource){
+  return $resource('http://localhost:3000/api/users.json', {},{
+    query: { method: 'GET' },
+    create: { method: 'POST' }
+  });
+}])
+
+.factory('User', ['$resource', function($resource){
+  return $resource('http://localhost:3000/api/users/:id.json', {}, {
+    show: { method: 'GET' },
+    update: { method: 'PUT', params: {id: '@id'} },
+    delete: { method: 'DELETE', params: {id: '@id'} }
+  });
+}])
 
 .run(['$rootScope', '$location', function($rootScope, $location) {
     $rootScope.goto = function(path) {
