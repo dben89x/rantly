@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319004957) do
+ActiveRecord::Schema.define(version: 20150325082739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150319004957) do
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
-    t.string "avatar"
+    t.string "avatar",          default: "http://www.gravatar.com/avatar/undefined?s=200"
   end
 
 end

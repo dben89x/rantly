@@ -27,9 +27,25 @@ function ($routeProvider) {
       templateUrl: 'views/signup.html',
       controller: 'SignUpCtrl'
     })
+    .when('/newRant', {
+      templateUrl: 'views/newRant.html',
+      controller: 'NewRantCtrl'
+    })
+    .when('/page-one', {
+      templateUrl : 'one.html'
+    })
+    .when('/page-two', {
+      templateUrl : 'two.html'
+    })
     .otherwise({
       // template: 'this doesnt exist'
       redirectTo: '/'
     });
   }
-]);
+])
+
+.run(['$rootScope', '$location', function($rootScope, $location) {
+    $rootScope.goto = function(path) {
+      $location.path(path);
+    };
+}]);

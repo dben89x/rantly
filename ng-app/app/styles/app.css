@@ -134,7 +134,7 @@ body {
   float:right;
   display:inline;
   width:73.9%;
-  padding:15px 0 0 15px;
+  padding: 15px;
 }
 
 
@@ -167,6 +167,129 @@ body {
   clear:both;
   display:inline;
   font-size:1.3em;
+}
+
+
+
+
+.rantNew{
+  border:1px solid #EBEBEB;
+  box-shadow:1px 1px 1px #EBEBEB;
+  border-radius:2px;
+  height:60vh;
+  padding:15px;
+}
+.rantTitleInput{
+  float:left;
+  border:none;
+  border-bottom:2px solid #EBEBEB;
+  font-size:29px;
+  font-weight:600;
+  width:60%;
+}
+.rantTitleInput:focus{
+  outline: none;
+  border:none;
+  border-bottom:2px solid #1ABC9C;
+}
+.cancelButton{
+  border:none;
+  background:##C0C0C0;
+  position:inherit;
+  color:white;
+  padding:.6em 1em .6em 1em;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  border-radius:.2em;
+
+}
+.saveButton{
+  border:none;
+  background:#1ABC9C;
+  color:white;
+  padding:.6em 1em .6em 1em;
+  position:inherit;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  border-radius:.2em;
+}
+.newRantButtons{
+  height:10%;
+}
+.saveButton:hover{
+  background:white;
+  border: 1px solid #1ABC9C;
+  color:#1ABC9C;
+}
+.cancelButton:hover{
+  background:white;
+  border: 1px solid #C0C0C0;
+  color:#C0C0C0;
+}
+.newRantAvatar{
+  width:22%;
+  float:left;
+  margin-top:10px;
+}
+.newRantTextArea{
+  float:left;
+  margin-top:10px;
+  width:77%;
+  height:80%;
+  border:2px solid #EBEBEB;
+  font-size:1.4em;
+  padding:.5em;
+}
+.newRantTextArea:focus{
+  outline:2px solid #1ABC9C;
+}
+
+
+
+
+.view-container{
+  position:relative;
+}
+
+.view-animation.ng-enter {
+  -webkit-animation: enter_animation 500ms;
+  animation: enter_animation 500ms;
+
+  /*
+   * ng-animate has a slight starting delay for optimization purposes
+   * so if you see a flicker effect then you'll need to put some extra
+   * styles to "shim" the animation.
+   */
+  left:100%;
+}
+
+.view-animation.ng-leave {
+  left:0%;
+  opacity:1;
+}
+
+.view-animation.ng-leave,
+.view-animation.ng-enter {
+  position:absolute;
+  top:0;
+  width:100%;
+  opacity:1;
+}
+
+.reveal-animation.ng-enter {
+ -webkit-transition: 1s linear all; /* Safari/Chrome */
+ transition: 1s linear all; /* All other modern browsers and IE10+ */
+
+ opacity: 1;
+}
+
+
+@-webkit-keyframes enter_animation {
+  from { left:100%; }
+  to { left:0%; }
+}
+
+@-webkit-keyframes leave_animation {
+  from { left:100%; }
+  to { left:0%; }
 }
 
 

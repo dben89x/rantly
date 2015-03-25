@@ -28,6 +28,7 @@
       <input type="button"
              ng-model="createRant"
              value='New Rant'
+             ng-click="goto('/newRant')"
              class='rant-create-button pull-right btn'>
     </div>
 
@@ -62,7 +63,10 @@
     </aside>
 
     <div class="main">
-      <div ng-view=""></div>
+      <div class="view-container">
+         <div ng-view class='view-animation'></div>
+      </div>
+
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -91,6 +95,8 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="pluralize.js"></script>
+    <script src="scripts/controllers/newRant.js"></script>
     <script src="scripts/controllers/signup.js"></script>
     <script src="scripts/controllers/rants.js"></script>
     <script src="scripts/controllers/users.js"></script>
