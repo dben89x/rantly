@@ -133,7 +133,7 @@ body {
 .main{
   float:right;
   display:inline;
-  width:73.9%;
+  width:73.8%;
   padding: 15px;
 }
 
@@ -150,9 +150,30 @@ body {
   margin:15px;
 }
 .rant-thumb-title{
+  width:100%;
+  float:left;
   font-weight:600;
   font-size:29px;
-  margin-bottom:.4em;
+  padding-bottom:.4em;
+}
+.rantEditButton{
+  font-size:14px !important;
+  float:left;
+  border:none;
+  background:#1ABC9C;
+  color:white;
+  padding:.6em 1em .6em 1em;
+  position:inherit;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  border-radius:.2em;
+}
+.rantEditButton:focus{
+  outline:none;
+}
+.rantEditButton:hover{
+  background:white;
+  border: 1px solid #1ABC9C;
+  color:#1ABC9C;
 }
 .rant-thumb-avatar{
   clear:both;

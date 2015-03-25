@@ -3,10 +3,10 @@ class RantsController < ApplicationController
     render json: Rant.all
   end
 
-  def show
-
+  def edit
+    render json: Rant.find(params[:id])
   end
-  
+
   def create
 
   end

@@ -27,12 +27,13 @@ function ($routeProvider) {
       templateUrl: 'views/signup.html',
       controller: 'SignUpCtrl'
     })
-    .when('/newRant', {
+    .when('/rants/new', {
       templateUrl: 'views/newRant.html',
       controller: 'NewRantCtrl'
     })
-    .when('/page-one', {
-      templateUrl : 'one.html'
+    .when('/rants/:id/edit', {
+      template: 'editRant.html',
+      controller: 'EditRantCtrl'
     })
     .when('/page-two', {
       templateUrl : 'two.html'
