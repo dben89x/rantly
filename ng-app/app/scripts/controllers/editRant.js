@@ -6,11 +6,11 @@ angular.module('rantlyControllers')
     Rants.get(function(rants) {
       $scope.rants = rants.rants;
     });
-    $scope.findRant = function() {
-      Rant.get({id: $scope.id}, function(rant) {
-        $scope.rant = rant;
-      });
-    }
+    Rant.get({id: $routeParams.id}, function(rant) {
+      $scope.rant = rant.rant;
+      console.log($scope.rant);
+    });
+
     console.log(Object.keys($routeParams));
     console.log($route.current.params);
 }]);

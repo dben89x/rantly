@@ -6,8 +6,7 @@ angular.module('rantlyControllers')
     $scope.rants = data.rants;
   });
   $scope.goto = function(path) {
-      $location.path(path);
-
+    $location.path(path);
   }
   // $scope.goto = function(id) {
     // $scope.foo = id;
