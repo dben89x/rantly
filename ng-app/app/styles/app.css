@@ -326,6 +326,10 @@ body {
   margin: 0 15px 15px 0;
 }
 
+button:focus{
+  outline:none;
+}
+
 
 
 /*a{

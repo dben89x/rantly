@@ -7,12 +7,12 @@ class UsersController<ApplicationController
     render json: User.find(params[:id])
   end
 
-  def create
-
+  def new
+    render json: User.new
   end
 
   def update
-    
+
   end
 
   def destroy

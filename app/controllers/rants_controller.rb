@@ -12,7 +12,17 @@ class RantsController < ApplicationController
   end
 
   def create
+    rant = Rant.new(params.require(:rant).permit(:title, :body))
 
+    if rant.save
+      render json: rant
+    else
+      render json: {errors: user.errors.full_messages}
+    end
+  end
+
+  def new
+    render json: Rant.new
   end
 
   def update

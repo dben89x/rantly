@@ -1,12 +1,12 @@
-<div ng-model='rant' class="rantNew">
-  <input type="text" ng-model='title' placeholder='Rant Title' class='rantTitleInput'>
+<form name='rantNew' ng-model='rant' class="rantNew">
+  <input type="text" ng-model='rant.title' placeholder='Rant Title' class='rantTitleInput'>
   <div class="newRantButtons">
     <button class='fa fa-sign-out cancelButton pull-right' ng-click="goto('/rants')"> Cancel</button>
     <button class='saveButton fa fa-floppy-o pull-right' ng-click="save('title', 'rant-body')"> Save</button>
   </div><br>
   <div class="newRantAvatar">
     Avatar <br>
-    <h4>{{body.length || 0}} characters.</h4>
+    <h4>{{rant.body.length || 0}} characters.</h4>
   </div>
-  <textarea ng-model='body' class='newRantTextArea' placeholder='Start your rant.'></textarea>
-</div>
+  <textarea ng-model='rant.body' class='newRantTextArea' placeholder='Start your rant.'></textarea>
+</form>
