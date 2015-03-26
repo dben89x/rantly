@@ -2,7 +2,7 @@
   <div class="rant-thumb">
     <div class="rant-thumb-content clearfix">
       <div class='rant-thumb-title'>{{rant.title}}
-        <button class='fa fa-pencil-square-o rantEditButton pull-right' ng-click:"goto('/rants/{{:id}}/edit')"> Edit</button>
+        <button class='fa fa-pencil-square-o rantEditButton pull-right' ng-click="goto('rants/{{rant.id}}/edit')"> Edit</button>
       </div>
       <img class='rant-thumb-avatar' src={{rant.user.avatar}} style="width:21%;height:100px" alt="" />
       <div class="rant-thumb-body">{{rant.body}}</div>
@@ -12,3 +12,5 @@
     {{rant}}
   </div>
 </div>
+<h1>Sing foo</h1>
+{{foo}}

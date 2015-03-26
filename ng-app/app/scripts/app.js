@@ -63,6 +63,21 @@ angular.module('rantly')
   });
 }])
 
+.factory('Rants', ['$resource',function($resource){
+  return $resource('http://localhost:3000/api/rants.json', {},{
+    query: { method: 'GET' },
+    create: { method: 'POST' }
+  });
+}])
+
+.factory('Rant', ['$resource', function($resource){
+  return $resource('http://localhost:3000/api/rants/:id.json', {}, {
+    show: { method: 'GET' },
+    update: { method: 'PUT', params: {id: '@id'} },
+    delete: { method: 'DELETE', params: {id: '@id'} }
+  });
+}])
+
 .run(['$rootScope', '$location', function($rootScope, $location) {
     $rootScope.goto = function(path) {
       $location.path(path);

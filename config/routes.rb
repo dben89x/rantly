@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope '/api' do
-    resources :rants, except: [:show]
-    resources :users, except: [:new, :edit]
+    resources :rants
+    resources :users
   end
 end
