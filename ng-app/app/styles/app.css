@@ -213,15 +213,17 @@ body {
   border:none;
   border-bottom:2px solid #1ABC9C;
 }
+.newRantButtons{
+  height:10%;
+}
 .cancelButton{
   border:none;
-  background:##C0C0C0;
+  background:#C0C0C0;
   position:inherit;
   color:white;
   padding:.6em 1em .6em 1em;
   font-family: '.HelveticaNeueDeskInterface-Regular';
   border-radius:.2em;
-
 }
 .saveButton{
   border:none;
@@ -232,8 +234,15 @@ body {
   font-family: '.HelveticaNeueDeskInterface-Regular';
   border-radius:.2em;
 }
-.newRantButtons{
-  height:10%;
+.deleteButton{
+  border:none;
+  background:#F1C40F;
+  position:inherit;
+  color:white;
+  padding:.6em 1em .6em 1em;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  border-radius:.2em;
+  margin-left:5px;
 }
 .saveButton:hover{
   background:white;
@@ -244,6 +253,11 @@ body {
   background:white;
   border: 1px solid #C0C0C0;
   color:#C0C0C0;
+}
+.deleteButton:hover{
+  background:white;
+  color:#F1C40F;
+  border: 1px solid #F1C40F;
 }
 .newRantAvatar{
   width:22%;

@@ -1,22 +1,19 @@
 <div ng-model='rant' class="rantNew">
-  {{rant.title}}
   <input type="text" class='rantTitleInput' ng-model='rant.title'>
   <div class="newRantButtons">
+    <button class='fa fa-trash-o deleteButton pull-right' ng-click='delete()'> Delete</button>
     <button class='fa fa-sign-out cancelButton pull-right' ng-click="goto('/rants')"> Cancel</button>
-    <button class='saveButton fa fa-floppy-o pull-right' ng-click="save('rant.title', 'rant.body')"> Save</button>
+    <button class='saveButton fa fa-floppy-o pull-right' ng-click="save()"> Save</button>
   </div><br>
   <div class="newRantAvatar">
-    Avatar <br>
+    <img src={{rant.user.avatar}}
+         style="width:205px;
+                height:100px;
+                border:4px dashed black;
+                border-radius: 25px 25px 0;
+                margin-top:15px;">
+     <br>
     <h4>{{rant.body.length || 0}} characters.</h4>
   </div>
   <textarea ng-model='rant.body' class='newRantTextArea'></textarea>
 </div>
-
-
-<hr><hr>
-<form ng-submit='findRant()'>
-  <input type="text" ng-model="id">
-  <input type="submit" value="Find user">
-</form>
-<h1>A single rant</h1>
-{{rant.body}}

@@ -6,22 +6,15 @@ angular.module('rantlyControllers')
   $scope.goto = function(path) {
     $location.path(path);
   };
-  $scope.save = function () {
-      var newRant = Rants.create({rant: $scope.rant}, function() {
+  $scope.save = function() {
+      if ($scope.rantNew.$valid){
+      Rants.create({rant: $scope.rant}, function() {
           $location.path('/');
+        },
+        function(error) {
+          console.log(error);
         }
-
-        // },
-        // function(error) {
-        //   console.log(Rants);
-        //   console.log(error);
-        // }
-      );
-      console.log($scope);
+      )};
   };
-  $scope.r = new Rant();
-  $scope.r.$save(function(){
 
-  console.log($scope.r);
-});
 }]);

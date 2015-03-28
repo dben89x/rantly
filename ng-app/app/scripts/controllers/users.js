@@ -10,7 +10,7 @@ angular.module('rantlyControllers')
       User.get({id: $scope.id}, function(user) {
         $scope.user = user;
       });
-    }
+    };
     console.log(Object.keys($routeParams));
     console.log($route.current.params);
 }]);
