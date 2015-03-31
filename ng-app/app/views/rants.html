@@ -1,4 +1,4 @@
-<div ng-repeat='rant in rants'>
+<div ng-repeat='rant in rants | filter:rantSearch'>
   <div class="rant-thumb">
     <div class="rant-thumb-content clearfix">
       <div class='rant-thumb-title'>{{rant.title}}

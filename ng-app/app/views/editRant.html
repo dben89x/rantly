@@ -1,4 +1,4 @@
-<div ng-model='rant' class="rantNew">
+<form name='rantEdit' ng-model='rant' class="rantEdit">
   <input type="text" class='rantTitleInput' ng-model='rant.title'>
   <div class="newRantButtons">
     <button class='fa fa-trash-o deleteButton pull-right' ng-click='delete()'> Delete</button>
@@ -16,4 +16,4 @@
     <h4>{{rant.body.length || 0}} characters.</h4>
   </div>
   <textarea ng-model='rant.body' class='newRantTextArea'></textarea>
-</div>
+</form>

@@ -23,7 +23,8 @@
     <div class="subnav">
       <input type="text"
              ng-model="rantSearch"
-             placeholder='Search'
+             placeholder='Search Rants'
+             ng-change='goto("/")'
              class='rant-search-input'>
       <input type="button"
              ng-model="createRant"
