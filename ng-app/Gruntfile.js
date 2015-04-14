@@ -435,6 +435,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'heroku:production',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
