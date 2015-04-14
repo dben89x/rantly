@@ -10,11 +10,12 @@ gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers'
 
-group :production, :staging do
-  gem "rails_12factor"
-  gem "rails_stdout_logging"
-  gem "rails_serve_static_assets"
-end
+
+gem 'rails_12factor', group: :production
+gem 'rails_serve_static_assets', group: :production
+gem 'rails_stdout_logging',group: :production
+
+
 # gem 'jbuilder'
 # gem 'unicorn'
 # gem 'capistrano', :group => :development
