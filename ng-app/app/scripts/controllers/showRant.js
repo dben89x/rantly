@@ -4,7 +4,7 @@ angular.module('rantlyControllers').controller('ShowRantCtrl',function($scope, R
     console.log(rant);
   }); // get() returns a single entry
 
-  $http.get('http://localhost:3000/api/rants/').success(function(data) {
+  $http.get('http://rantly-app.herokuapp.com/api/rants/').success(function(data) {
     $scope.rants = data.rants;
   });
 

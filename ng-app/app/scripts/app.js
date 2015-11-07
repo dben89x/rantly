@@ -49,14 +49,14 @@ angular.module('rantly')
 ])
 
 .factory('Users', ['$resource',function($resource){
-  return $resource('http://localhost:3000/api/users.json', {},{
+  return $resource('http://rantly-app.herokuapp.com/api/users.json', {},{
     query: { method: 'GET' },
     create: { method: 'POST' }
   });
 }])
 
 .factory('User', ['$resource', function($resource){
-  return $resource('http://localhost:3000/api/users/:id.json', {}, {
+  return $resource('http://rantly-app.herokuapp.com/api/users/:id.json', {}, {
     show: { method: 'GET' },
     update: { method: 'PUT', params: {id: '@id'} },
     delete: { method: 'DELETE', params: {id: '@id'} }
@@ -64,14 +64,14 @@ angular.module('rantly')
 }])
 
 .factory('Rants', ['$resource',function($resource){
-  return $resource('http://localhost:3000/api/rants.json', {},{
+  return $resource('http://rantly-app.herokuapp.com/api/rants.json', {},{
     query: { method: 'GET' },
     create: { method: 'POST' }
   });
 }])
 
 .factory('Rant', ['$resource', function($resource){
-  return $resource('http://localhost:3000/api/rants/:id.json', {}, {
+  return $resource('http://rantly-app.herokuapp.com/api/rants/:id.json', {}, {
     show: { method: 'GET' },
     update: { method: 'PUT', params: {id: '@id'} },
     delete: { method: 'DELETE', params: {id: '@id'} }
